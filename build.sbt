@@ -13,7 +13,7 @@ lazy val commonSettings = Seq(
   ),
   resolvers ++= Seq(
     Resolver.sonatypeRepo("releases"),
-    Resolver.sonatypeRepo("snapshots"),
+    Resolver.sonatypeRepo("snapshots")
   )
 )
 
