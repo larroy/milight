@@ -14,7 +14,43 @@ lazy val commonSettings = Seq(
   resolvers ++= Seq(
     Resolver.sonatypeRepo("releases"),
     Resolver.sonatypeRepo("snapshots")
+  ),
+
+  // Sonatype publishing
+  publishMavenStyle := true,
+  publishTo := {
+    val nexus = "https://oss.sonatype.org/"
+    if (isSnapshot.value)
+      Some("snapshots" at nexus + "content/repositories/snapshots")
+    else
+      Some("releases" at nexus + "service/local/staging/deploy/maven2")
+  },
+  //autoScalaLibrary := false,
+  //autoScalaLibrary in test := false,
+  publishArtifact in Test := false,
+  pomIncludeRepository := { _ => false },
+  pomExtra := (
+    <url>https://github.com/larroy/milight</url>
+    <licenses>
+      <license>
+        <name>Apache</name>
+        <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        <distribution>repo</distribution>
+      </license>
+    </licenses>
+    <scm>
+      <url>https://github.com/larroy/milight</url>
+      <connection>scm:git@github.com:larroy/milight.git</connection>
+    </scm>
+    <developers>
+      <developer>
+        <id>larroy</id>
+        <name>Pedro Larroy</name>
+        <url>https://github.com/larroy</url>
+      </developer>
+    </developers>
   )
+
 )
 
 lazy val commonDependencies = Seq(

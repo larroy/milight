@@ -2,9 +2,18 @@
 scala milight / limitless led library
 
 
+## Usage from SBT
 
+Add the following to your dependencies
+```
+"com.larroy.milight" %% "milight" % "0.1"
+```
+
+
+## Example usage
 ```
 import com.larroy.milight._
+// Provide the IP address of the WIFI bridge
 val w = WifiBridge("192.168.178.20")
 // Set the color of group 4 to red
 w.color(4,Color(255,0,0))
