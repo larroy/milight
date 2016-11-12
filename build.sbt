@@ -1,5 +1,5 @@
 lazy val commonSettings = Seq(
-  version := "0.1",
+  version := "0.2-SNAPSHOT",
   organization := "com.larroy.milight",
   name := "milight",
   scalaVersion := "2.11.8",
@@ -55,7 +55,6 @@ lazy val commonSettings = Seq(
 
 lazy val commonDependencies = Seq(
   "org.slf4j" % "jcl-over-slf4j" % "1.7.+",
-  "commons-logging" % "commons-logging" % "1.2",
   "ch.qos.logback" % "logback-classic" % "1.1.+"
 )
 
