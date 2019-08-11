@@ -4,8 +4,6 @@ import java.net.InetSocketAddress
 import java.nio.ByteBuffer
 import java.nio.channels.DatagramChannel
 
-import scala.collection.mutable
-import scala.collection.JavaConversions._
 import java.util.concurrent.LinkedBlockingQueue
 
 import scala.util.control.NonFatal

@@ -1,8 +1,8 @@
 lazy val commonSettings = Seq(
-  version := "0.2-SNAPSHOT",
+  version := "0.3-SNAPSHOT",
   organization := "com.larroy.milight",
   name := "milight",
-  scalaVersion := "2.11.8",
+  scalaVersion := "2.12.9",
   scalacOptions := Seq(
     "-target:jvm-1.8",
     "-unchecked",
@@ -59,7 +59,6 @@ lazy val commonDependencies = Seq(
 )
 
 lazy val testDependencies = Seq(
-  "org.specs2" %% "specs2" % "3.+" % "test"
 )
 
 lazy val root = project.in(file("."))
