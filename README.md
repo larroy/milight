@@ -6,7 +6,7 @@ scala milight / limitless led library
 
 Add the following to your dependencies
 ```
-"com.larroy.milight" %% "milight" % "0.1"
+"com.larroy.milight" %% "milight" % "0.3-SNAPSHOT"
 ```
 
 
